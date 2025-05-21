@@ -1,29 +1,48 @@
-# 🐍 Python OOP: Encapsulation with Private Members
+# 🐍 Python OOP: Employee class by defining employee attributes
 
-## 🎯 AIM
+## 🎯 AIM :
+To create an Employee class in Python with attributes name and salary, and define instance methods show() to display employee details and work() to show assigned tasks.
 
-To implement **Encapsulation** in Python by defining a class `Rectangle` with **private member variables** `__length` and `__breadth`.
 
----
 
-## 🧠 ALGORITHM
 
-1. **Define the Class**:
-   - Create a class `Rectangle` with two private attributes: `__length` and `__breadth`.
+## 🧠 ALGORITHM :
+1. Define a class Employee.
+ 
+2.Create an __init__() constructor to initialize name and salary.
+   
+3.Define a show() method to print name and salary.
+   
+4. Define a work(task) method to print the task being worked on.
+   
+5.Create an object of the Employee class with sample data.
+   
+6.Call the show() and work() methods on the object.
 
-2. **Initialize Variables**:
-   - Use the `__init__()` constructor to set initial values for `__length` and `__breadth`.
 
-3. **Print Values**:
-   - Display the private variables from within the class to demonstrate access.
 
-4. **Instantiate the Object**:
-   - Create an object of the `Rectangle` class to trigger the constructor.
+## 💻 Program :
+```.py
+   class Employee:
+    def __init__(self, name, salary, project):
+        self.name = name
+        self.salary = salary
+        self.project = project
+    def show(self):
+        print("Name: ", self.name, 'Salary:', self.salary)
+        
+    def work(self):
+        print(self.name, 'is working on', self.project)
 
----
+per1=Employee("Jessa",8000,"NLP")
+per1.show()
+per1.work()
+```
 
-## 💻 Program
+## Output :
+![image](https://github.com/user-attachments/assets/3b780d0a-630e-4740-849e-96482cc4143c)
 
-## Output
 
-## Result
+## Result :
+The program successfully creates an Employee object and displays the employee's details and current work using instance methods.
+
