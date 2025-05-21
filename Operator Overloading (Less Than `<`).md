@@ -1,31 +1,64 @@
-# 🐍 Python OOP: Operator Overloading (Less Than `<`)
+# 🐍 Python OOP:Polymorphism with Circle and Square Classes Using perimeter() and area() Methods 
 
-## 🎯 AIM
+## 🎯 AIM :
+To demonstrate polymorphism by defining perimeter() and area() methods in both Circle and Square classes and invoke them to compute and display respective geometric values.
 
-To write a Python program that demonstrates **operator overloading** by overloading the **less than (`<`)** operator using a custom class.
+## 🧠 ALGORITHM :
+1.Import the math module for mathematical constants and functions.
 
----
+2.Define a class Square with an instance variable side.
 
-## 🧠 ALGORITHM
+3.Implement perimeter() to calculate the perimeter of the square as 4 * side.
 
-1. **Create Class `A`**:
-   - Define the `__init__()` method to initialize the object with a value `a`.
+4.Implement area() to calculate the area of the square as side * side.
 
-2. **Overload the `<` Operator**:
-   - Define the `__lt__()` method with logic:
-     - If `self.a < o.a`, return `"ob1 is less than ob2"`
-     - Else, return `"ob2 is less than ob1"`
+5.Define a class Circle with an instance variable radius.
 
-3. **Create Objects**:
-   - Instantiate two objects `ob1` and `ob2` with values.
+6.Implement perimeter() to calculate the circumference as 2 * pi * radius.
 
-4. **Use `<` Operator**:
-   - Use `print(ob1 < ob2)` to trigger the overloaded behavior.
+7.Implement area() to calculate the area as pi * radius^2.
 
----
+8.Take input values for the side of the square and the radius of the circle.
 
-## 💻 Program
+9.Create objects of Square and Circle using input values.
 
-## Output
+10.Call and print the results of perimeter() and area() methods for both objects.
 
-## Result
+
+
+
+
+## 💻 Program :
+```.py
+import math
+class calculation:
+    def __init__(self,a,b):
+        self.a=a
+        self.b=b
+class Area(calculation):
+    def perimeter(self):
+        print(f"Perimeter computed for square:  {4*self.a}")
+    def area(self):
+        print(f"Area computed for square:  {self.a**2}")
+class Circle(calculation):
+    def perimeter(self):
+        print(f"Perimeter computed for Circle:  {2*math.pi*self.b}")
+    def area(self):
+        print(f"Area computed for Circle:  {math.pi*self.b*self.b}")
+a=int(input())
+b=int(input())
+sqr=Area(a,b)
+cir=Circle(a,b)
+for i in (sqr,cir):
+    i.perimeter()
+    i.area()
+```
+
+## Output :
+
+![image](https://github.com/user-attachments/assets/ec84f2fd-7d2a-49d6-b587-b0f2a4569fa3)
+
+
+## Result :
+The program successfully uses polymorphism to call the same method names (perimeter() and area()) on different classes (Circle and Square), calculating and displaying correct geometric values based on the shape.
+
